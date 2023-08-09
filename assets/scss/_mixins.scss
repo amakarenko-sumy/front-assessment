@@ -1,0 +1,21 @@
+@mixin breakpoint-min($bpName) {
+    @if map-has-key($breakpoints, $bpName) {
+        @media (min-width: calc(map-get($breakpoints, $bpName) + 1px)) {
+            @content;
+        }
+    }
+    @else {
+        @error "Breakpoint #{$bpName} doesn`t exist";
+    }
+}
+
+@mixin breakpoint-max($bpName) {
+    @if map-has-key($breakpoints, $bpName) {
+        @media (max-width: map-get($breakpoints, $bpName)) {
+            @content;
+        }
+    }
+    @else {
+        @error "Breakpoint #{$bpName} doesn`t exist";
+    }
+}

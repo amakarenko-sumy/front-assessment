@@ -1,0 +1,227 @@
+$borderRadius: 4px;
+$rowHeight: 50px;
+
+table.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+
+  @include breakpoint-max(md) {
+    max-width: 520px;
+    margin: auto;
+  }
+
+
+  @include breakpoint-min(md) {
+    table-layout: fixed;
+  }
+
+  tr {
+    @include breakpoint-min(md) {
+      height: 50px;
+    }
+  }
+
+  td, th {
+    border: 1px systemColor(lightGrey);
+    padding: 10px;
+    border-style: solid solid none solid;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include breakpoint-min(md) {
+      text-align: start;
+      padding-left: 22px;
+      vertical-align: middle;
+      border-style: none none solid;
+    }
+  }
+
+  tr td:last-child {
+    border-bottom-style: solid;
+  }
+
+  tfoot td {
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+  }
+
+  caption {
+    text-align: start;
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  thead {
+    @include breakpoint-max(md) {
+      display: none;
+    }
+
+    tr {
+      background-color: systemColor(ligthBlue);
+
+      th {
+        content: attr(data-width);
+        font-weight: 700;
+      }
+    }
+
+  }
+
+  tbody {
+    tr {
+      @include breakpoint-max(md) {
+        display: block;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      td {
+        color: systemColor(black);
+
+        @include breakpoint-max(md) {
+          display: block;
+          text-align: right;
+
+          &:before {
+            content: attr(data-label);
+            float: left;
+            font-weight: 700;
+            color: systemColor(darkBlue);
+          }
+        }
+      }
+    }
+  }
+
+  tfoot {
+    color: systemColor(lightBlack);
+
+    tr {
+      background-color: systemColor(ligthBlue);
+
+      .table-footer {
+        display: flex;
+
+        @include breakpoint-min(md) {
+          margin-right: 20px;
+        }
+
+          &-item {
+          display: flex;
+          align-items: center;
+            @include breakpoint-max(md) {
+                    flex-direction: column;
+            }
+
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+
+          &:nth-child(2) {
+            margin-left: auto;
+          }
+
+          .icon-button {
+            height: 24px;
+            width: 24px;
+
+            &:not(:disabled) {
+              color: systemColor(darkGrey);
+            }
+          }
+        }
+
+        &-total {
+          @include breakpoint-min(md) {
+            margin-left: 6px;
+          }
+        }
+
+        &-navigation {
+          display: inline-flex;
+
+          @include breakpoint-min(md) {
+            margin-left: 20px;
+          }
+        }
+
+        &-limit-select {
+          -webkit-appearance: none;
+          appearance: none;
+          height: 25px;
+          min-width: 61px;
+          border-radius: $borderRadius;
+          border: solid 1px systemColor(grey);
+          color: systemColor(darkGrey);
+          padding: 0 20px 0 10px;
+          background-image: url(../images/select-arrow-down.svg);
+          background-size: 10px;
+          background-repeat: no-repeat;
+          background-position: calc(100% - 8px) center;
+          font-family: "Montserrat", sans-serif;
+          cursor: pointer;
+
+          @include breakpoint-min(md) {
+            margin: 0 15px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint-max(md) {
+    tbody {
+      td {
+        border-top-style: solid;
+
+        &:first-child {
+          border-radius: $borderRadius $borderRadius 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 $borderRadius $borderRadius;
+        }
+      }
+
+      td:not(:last-child) {
+        td:last-child {
+          border-radius: 0 $borderRadius 0;
+        }
+      }
+    }
+
+    tfoot {
+      td {
+        border-top-style: none;
+      }
+    }
+  }
+
+  @include breakpoint-min(md) {
+    thead th {
+      border-top-style: solid;
+
+      &:first-child {
+        border-top-left-radius: $borderRadius
+      }
+
+      &:last-child {
+        border-top-right-radius: $borderRadius
+      }
+    }
+
+    tr td:first-child, tr th:first-child {
+      border-left-style: solid;
+    }
+
+    tr td:last-child, tr th:last-child {
+      border-right-style: solid;
+    }
+  }
+}

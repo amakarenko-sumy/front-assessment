@@ -1,0 +1,11 @@
+{
+  "name": "front-assessment",
+  "url" : "https://amakarenko-sumy.github.io/front-assessment/",
+  "email" : "amakarenko.sumy@gmail.com",
+  "author": "Andrii Makarenko",
+  "license" : "none",
+  "scripts": {
+    "compile": "sass assets/scss/styles.scss assets/css/styles.css",
+    "watch": "sass --watch assets/scss/styles.scss assets/css/styles.css"
+  }
+}
