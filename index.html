@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Wide selection of lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.">
 
     <title>Apartment Owners Association</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=1.1.1">
 </head>
 <body>
 <header class="header">
     <div class="container-lg flex align-items-center full-height">
         <img src="./assets/images/logo.svg" height="40" width="40" alt="logo">
         <p class="company-name text-size-sx font-bold uppercase">Apartment Owners Association</p>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
+        <div class="hamburger-menu">
             <span></span>
         </div>
         <nav class="navigation uppercase">
@@ -58,36 +59,43 @@
     </section>
     <section class="container-lg news">
         <article class="news-item flex align-items-center">
-            <div class="news-item-image-box flex">
-                <img src="assets/images/picture-1.jpg" alt="woman with a little dog image">
+            <div class="news-item-image flex">
+                <div class="news-item-image-box">
+                    <img height="100%" width="100%" src="assets/images/picture-1.jpg"
+                         alt="woman with a little dog image">
+                </div>
             </div>
             <div class="news-item-info">
-                <h3 class="text-color-blue news-item-info-small-title">Know who lives at your home with</h3>
-                <h2 class="news-item-info-big-title">Tenant screening service</h2>
+                <p class="text-color-blue news-item-info-small-title">Know who lives at your home with</p>
+                <h1 class="news-item-info-big-title">Tenant screening service</h1>
                 <p class="text-size-lg news-item-info-description">Tenant Screening is a service that allows you to
                     Lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.</p>
                 <a href="#" class="button">Try it</a>
             </div>
         </article>
         <article class="news-item flex align-items-center">
-            <div class="news-item-image-box flex">
-                <img src="assets/images/picture-2.jpg" alt="opened book image">
+            <div class="news-item-image flex">
+                <div class="news-item-image-box">
+                    <img height="100%" width="100%" src="assets/images/picture-2.jpg" alt="opened book image">
+                </div>
             </div>
             <div class="news-item-info">
-                <h3 class="text-color-blue news-item-info-small-title">Make your business grow with</h3>
-                <h2 class="news-item-info-big-title">Advertising</h2>
+                <p class="text-color-blue news-item-info-small-title">Make your business grow with</p>
+                <h1 class="news-item-info-big-title">Advertising</h1>
                 <p class="text-size-lg news-item-info-description">Wide selection of advertising oportunities like Lorem
                     usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.</p>
                 <a href="#" class="button">Learn more</a>
             </div>
         </article>
         <article class="news-item flex align-items-center">
-            <div class="news-item-image-box flex">
-                <img src="assets/images/picture-1.jpg" alt="woman with a little dog image">
+            <div class="news-item-image flex">
+                <div class="news-item-image-box">
+                    <img height="100%" width="100%" src="assets/images/picture-1.jpg" alt="woman with a little dog image">
+                </div>
             </div>
             <div class="news-item-info">
-                <h3 class="text-color-blue news-item-info-small-title">Know who lives at your home with</h3>
-                <h2 class="news-item-info-big-title">Tenant screening service</h2>
+                <p class="text-color-blue news-item-info-small-title">Know who lives at your home with</p>
+                <h1 class="news-item-info-big-title">Tenant screening service</h1>
                 <p class="text-size-lg news-item-info-description">Tenant Screening is a service that allows you to
                     Lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.</p>
                 <a href="#" class="button">Try it</a>
@@ -211,6 +219,6 @@
     <span>Copyright © 2020 Apartment Owners Association. All Rights Reserved.</span>
     <a class="text-color-white" href="#">Privacy Policy</a>
 </footer>
-<script src="./assets/js/main.js"></script>
+<script src="./assets/js/main.js?v=1.1.1"></script>
 </body>
 </html>

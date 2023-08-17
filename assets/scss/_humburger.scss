@@ -1,4 +1,4 @@
-.hamburger {
+.hamburger-menu {
   height: 31px;
   width: 38px;
   display: flex;
@@ -6,40 +6,40 @@
   justify-content: space-between;
   cursor: pointer;
 
+  &::before {
+    transform-origin: 0 0;
+    transition: transform 0.4s ease-in-out;
+    content: "";
+  }
+  &::after {
+    transform-origin: 0 100%;
+    transition: transform 0.4s ease-in-out;
+    content: "";
+  }
+
   & > span {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  & > span, &::before, &::after  {
     display: block;
     height: 5px;
     width: 100%;
     border-radius: 10px;
     background: systemColor(darkBlue);
-
-    &:nth-child(1)
-    {
-      transform-origin: 0 0;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    &:nth-child(2) {
-      transition: transform 0.2s ease-in-out;
-    }
-
-    &:nth-child(3) {
-      transform-origin: 0 100%;
-      transition: transform 0.4s ease-in-out;
-    }
   }
 
-  &.opened > span {
-    &:nth-child(1)
+  &.opened {
+    &::before
     {
       transform: rotate(45deg);
     }
 
-    &:nth-child(2) {
+    & > span {
       transform: scaleY(0);
     }
 
-    &:nth-child(3) {
+    &::after {
       transform: rotate(-45deg);
     }
   }

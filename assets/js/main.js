@@ -1,7 +1,7 @@
 "use strict";
 
 const dropdownMenuItems = document.getElementsByClassName('dropdown-menu');
-const hamburgers = document.getElementsByClassName('hamburger');
+const hamburgers = document.getElementsByClassName('hamburger-menu');
 
 document.addEventListener('click', (e)=>{
     for (let dropdownMenuItem of dropdownMenuItems) {
