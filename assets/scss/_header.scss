@@ -1,0 +1,74 @@
+.header {
+  height: $headerHeight;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: systemColor(white);
+  z-index: 1000;
+
+  .company-name {
+    max-width: 145px;
+    margin-left: 11px;
+  }
+
+  nav {
+    @include breakpoint-max(md) {
+      position: absolute;
+      transform: translate3d(-150%, 0, 0);
+      top: $headerHeight;
+      left: 0;
+      min-width: 35%;
+      height: calc(100vh - $headerHeight);
+      padding: 0 10px;
+      background-color: systemColor(white);
+      border-top: solid 1px systemColor(lightGrey);
+      width: 260px;
+      box-shadow: 0 3px 15px systemColor(grey);
+      overflow-y: auto;
+    }
+
+    @include breakpoint-min(md) {
+      margin-left: auto;
+
+     & > ul {
+       & > li {
+         display: inline-block;
+
+       }
+     }
+    }
+
+    a {
+      display: flex;
+      padding: 0 20px;
+      height: 60px;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      color: systemColor(darkBlue);
+      &:hover, &:active {
+        background-color: systemColor(lightGrey);
+        border-radius: 12px;
+      }
+    }
+  }
+
+
+  .hamburger-menu {
+    margin-left: auto;
+
+    @include breakpoint-min(md) {
+      display: none;
+    }
+
+    @include breakpoint-max(md) {
+      &.opened ~ nav {
+        transition: transform 0.5s ease-in-out;
+        transform: translate3d(0, 0, 0);
+        display: block;
+      }
+    }
+  }
+}

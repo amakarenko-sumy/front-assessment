@@ -1,0 +1,31 @@
+.button {
+  min-width: 216px;
+  background-color: systemColor(blue);
+  color: systemColor(white);
+  border-radius: 30px;
+  font-weight: 600;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+
+  &:hover, &:active {
+    background-color: systemColor(darkBlue);
+  }
+}
+
+.icon-button {
+  border: none;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}

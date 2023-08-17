@@ -1,0 +1,7 @@
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    @include breakpoint-min(sm) {
+      font-size: 42px;
+    }
+}

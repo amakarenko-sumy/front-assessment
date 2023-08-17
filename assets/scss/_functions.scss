@@ -1,0 +1,8 @@
+@function systemColor($colorName) {
+    @if map-has-key($colors, $colorName) {
+        @return map-get($colors, $colorName)
+    }
+    @else {
+        @error "Syctem color #{$colorName} doesn`t exist";
+    }
+}

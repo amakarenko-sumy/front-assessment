@@ -1,0 +1,27 @@
+.hero-block {
+  background-image: url(../images/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  min-height: 398px;
+
+  & > h1 {
+    margin-bottom: 25px;
+  }
+
+  &-text-container{
+    padding: 20px 0;
+
+    @include breakpoint-max(sm) {
+      text-align: center;
+    }
+
+    @include breakpoint-min(sm) {
+      max-width: 480px;
+    }
+
+    @include breakpoint-max(md) {
+      text-shadow: systemColor(ligthBlue) 1px 0 10px;
+    }
+  }
+}
